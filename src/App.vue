@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <h1>App de tickets</h1>
+    <RouterView />
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  sockets: {
-    connect() {
-      console.log("socket connected");
-    },
-  },
 };
 </script>
 
