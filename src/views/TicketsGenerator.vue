@@ -1,15 +1,20 @@
 <template>
   <div>
     <h1>Generar tickets</h1>
-    <button @click="generateTicket">Generar nuevo ticket</button>
+    <Button :onclick="generateTicket">GENERAR NUEVO TICKET</Button>
     <h2 v-if="newTicket === ''">Cargando último ticket ...</h2>
     <p v-else>{{ newTicket }}</p>
   </div>
 </template>
 
 <script>
+import Button from "../components/Button";
+
 export default {
   name: "TicketsGenerator",
+  components: {
+    Button,
+  },
   data() {
     return {
       newTicket: "",
