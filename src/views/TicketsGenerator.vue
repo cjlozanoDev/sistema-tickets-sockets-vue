@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Generar tickets</h1>
+    <h2>Generar tickets</h2>
     <Button :onclick="generateTicket">GENERAR NUEVO TICKET</Button>
     <h2 v-if="newTicket === ''">Cargando último ticket ...</h2>
     <p v-else>{{ newTicket }}</p>
@@ -23,6 +23,9 @@ export default {
   created() {
     this.$socket.on("currentState", (data) => {
       this.newTicket = data.currentTicket;
+    });
+    this.$socket.emit("getLastTicket", null, (lastTicket) => {
+      this.newTicket = lastTicket;
     });
     this.sockets.subscribe("currentState", (data) => {
       this.newTicket = data.currentTicket;

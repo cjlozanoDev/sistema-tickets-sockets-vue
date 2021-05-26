@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>App de tickets</h1>
     <div>
+      <h2>Menú principal</h2>
       <Button :onclick="goToGenerator" icon="confirmation_number">
         PANTALLA GENERADOR DE TICKETS
       </Button>
