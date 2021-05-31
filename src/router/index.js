@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import TicketsGenerator from "../views/TicketsGenerator.vue";
+import AttendTicketsDesktop from "../views/AttendTicketsDesktop";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/generator",
     component: TicketsGenerator,
     name: "Generator",
+  },
+  {
+    path: "/attend-tickets-deskop/:numberDesktop",
+    component: AttendTicketsDesktop,
+    name: "AttendTicketsDesktop",
   },
 ];
 
