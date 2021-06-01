@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <h1>Sistema cj de tickets</h1>
-    <RouterView />
+    <div class="app__content">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -18,5 +19,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.app__title {
+  font-size: 3em;
+  padding: 15px 10px 38px;
+}
+.app__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 100vh;
 }
 </style>

@@ -42,6 +42,16 @@
             </Button>
           </template>
         </Card>
+        <Card>
+          <template v-slot:header>
+            <h3>PANTALLA PÚBLICA</h3>
+          </template>
+          <template v-slot:actions>
+            <Button :onclick="goToPublicScreen" icon="confirmation_number">
+              ACCEDER
+            </Button>
+          </template>
+        </Card>
       </div>
     </div>
   </div>
@@ -75,6 +85,11 @@ export default {
         params: {
           numberDesktop: this.desktopSelected,
         },
+      });
+    },
+    goToPublicScreen() {
+      this.$router.push({
+        name: "PublicScreen",
       });
     },
   },

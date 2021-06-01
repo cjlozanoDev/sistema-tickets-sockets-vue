@@ -1,5 +1,21 @@
 @import './variables.css';
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans Pro";
+  margin: 0;
+  padding: 0;
 }
+html, body, #app{
+  height: 100%;
+}
+
+#app {
+  display: flex;
+}
+

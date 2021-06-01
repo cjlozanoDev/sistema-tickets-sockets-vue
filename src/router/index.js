@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import TicketsGenerator from "../views/TicketsGenerator.vue";
 import AttendTicketsDesktop from "../views/AttendTicketsDesktop";
+import PublicScreen from "../views/PublicScreen";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/attend-tickets-deskop/:numberDesktop",
     component: AttendTicketsDesktop,
     name: "AttendTicketsDesktop",
+  },
+  {
+    path: "/public-screen",
+    component: PublicScreen,
+    name: "PublicScreen",
   },
 ];
 
