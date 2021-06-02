@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <h2>ESCRITORIO NÚMERO: {{ numberDesktop }}</h2>
-    <h4>
-      ATENDIENDO A
-      <span v-if="numberTicketAttended === ''">... </span>
-      <span v-else v-text="numberTicketAttended" />
-    </h4>
-    <Button :onclick="attendNextTicket"> ATENDER SIGUIENTE TICKET </Button>
+  <div class="ticket-desktop">
+    <div class="ticket-desktop__content">
+      <h2>ESCRITORIO NÚMERO: {{ numberDesktop }}</h2>
+      <h4>
+        ATENDIENDO A
+        <span v-if="numberTicketAttended === ''">... </span>
+        <span v-else v-text="numberTicketAttended" />
+      </h4>
+      <Button :onclick="attendNextTicket"> ATENDER SIGUIENTE TICKET </Button>
+    </div>
   </div>
 </template>
 
@@ -45,3 +47,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.ticket-desktop {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #34495e;
+  color: #fff;
+}
+.ticket-desktop__content {
+  font-size: 2em;
+}
+</style>
