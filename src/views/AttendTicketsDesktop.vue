@@ -58,6 +58,12 @@ export default {
   color: #fff;
 }
 .ticket-desktop__content {
-  font-size: 2em;
+  font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .ticket-desktop__content {
+    font-size: 2em;
+  }
 }
 </style>

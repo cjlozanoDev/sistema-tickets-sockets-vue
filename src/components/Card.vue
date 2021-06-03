@@ -21,5 +21,10 @@ export default {
   width: 300px;
   border: 1px solid #000;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card__actions {
+  margin-top: auto;
 }
 </style>
